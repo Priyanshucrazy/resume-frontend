@@ -183,7 +183,7 @@ function App() {
     formData.append("jd", jobDescription);
 
     try {
-      const response = await axios.post("http://127.0.0.1:5000/evaluate", formData);
+      const response = await axios.post("https://resume-backend-kw58.onrender.com/evaluate", formData);
       setResult(response.data.evaluation);
       const parsed = parseResult(response.data.evaluation);
       setParsedResult(parsed);
